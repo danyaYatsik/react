@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "./page/Home";
+import About from "./page/About";
+import Navbar from "./component/navbar/Navbar";
+import {useDispatch} from "react-redux";
+import {fetchTodosAction} from "./state/todo/actions";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchTodosAction())
+    }, [dispatch]);
+
+    return (
+        <BrowserRouter>
+            <Navbar/>
+            <div className='container'>
+                <Switch>
+                    <Route path={'/'} exact component={Home}/>
+                    <Route path={'/about'} component={About}/>
+                </Switch>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

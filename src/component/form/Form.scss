@@ -1,0 +1,24 @@
+form.form {
+  display: flex;
+  width: 100%;
+
+
+  input.form {
+    width: 80%;
+    font-size: 1rem;
+    background: white;
+    color: black;
+    padding: .5rem;
+    border: 1px solid darkcyan;
+  }
+
+  .button.form {
+    width: 20%;
+    background: aquamarine;
+  }
+
+  .button.form:hover {
+    background: darkcyan;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+li.todoItem {
+  list-style-type: none;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  border: 1px solid darkcyan;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.todoItem {
+  overflow-wrap: break-word;
+}
+
+button.todoItem {
+  background-color: aquamarine;
+  border: 1px solid darkcyan;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button.todoItem:hover {
+  cursor: pointer;
+  background-color: darkcyan;
+}

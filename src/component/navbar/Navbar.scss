@@ -1,0 +1,32 @@
+nav.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: aquamarine;
+
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+
+    li.navbar {
+      float: left;
+
+      a {
+        display: inline-block;
+        padding: .7rem;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  a:hover {
+    background: darkcyan;
+    font-weight: 600;
+  }
+}
